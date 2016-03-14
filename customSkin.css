@@ -1,0 +1,33 @@
+/* clear out the font based icon */
+.largePlayBtn.icon-play:before {
+    /*content: "";
+    color: #*/
+}
+
+.largePlayBtn.icon-play{
+  background-color: rgb(51, 133, 255);
+}
+
+/* replace play button with jack-o-lantern: */
+.mwPlayerContainer .largePlayBtn, .mwPlayerContainer .largePlayBtn:hover{
+    /*background-image: url('http://0.tqn.com/d/webclipart/1/0/o/s/4/Jack-O-Lantern2.png');*/
+    /*background-size: 93px 100px;
+    width:93px;
+    height:100px;
+    padding: 0px;
+    margin:-50px;*/
+}
+
+.controlsContainer .btn:hover{
+  color:#ABCE36
+}
+
+
+.controlsContainer .btn{
+  color: rgba(255, 255, 255, 1);
+}
+
+.xxx{
+  opacity: 0.1;
+  color:#f7f7f7;
+}

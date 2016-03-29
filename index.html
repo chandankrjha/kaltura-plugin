@@ -8,6 +8,18 @@
       position: fixed;
       background-color: #333333;
     }
+
+    nav {
+	background-color: #fff;
+	border: 1px solid #dedede;
+	border-radius: 4px;
+	box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+	color: #888;
+	display: block;
+	margin: 8px 22px 8px 22px;
+	overflow: hidden;
+	width: 90%;
+}
     </style>
 <script src="http://cdnapi.kaltura.com/p/2038991/sp/203899100/embedIframeJs/uiconf_id/32334211/partner_id/2038991"></script>
 <div id="kaltura_player_1457603268" style="width: 560px; height: 315px;opacity:1.0"><a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
@@ -51,7 +63,17 @@ kWidget.embed({
   "cache_st": 1457603268,
   "entry_id": "0_r69vz6k4"
 });
+function jsCallbackReady(objectId){
+  kdp = document.getElementById(objectId);
 
+  kdp.kBind('doPlay',function(){
+    window.parent.document.getElementsByTagName('body')[0].className = 'lights-out';
+  });
+
+  kdp.kBind('doPause',function(){
+    window.parent.document.getElementsByTagName('body')[0].className = '';
+  });
+}
 </script>
   </head>
   <body>

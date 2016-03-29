@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="bootstrap.css">
+  </head>
+  <body>
+    <script src="http://kaltura-dev-frontend-1405007937.us-east-1.elb.amazonaws.com/p/101/sp/10100/embedIframeJs/uiconf_id/23448134/partner_id/101"></script>
+    <div class ="container">
+      <div class="col-lg-offset-3 col-lg-7">
+      <h1>Change Media with Advertisement</h1>
+    <div id="kaltura_player_1450937941" style="width: 400px; height: 333px;"><a href="http://corp.kaltura.com/products/video-platform-features">Video Platform</a>
+    <a href="http://corp.kaltura.com/Products/Features/Video-Management">Video Management</a>
+    <a href="http://corp.kaltura.com/Video-Solutions">Video Solutions</a>
+    <a href="http://corp.kaltura.com/Products/Features/Video-Player">Video Player</a></div>
+    <script>
+    kWidget.embed({
+      "targetId": "kaltura_player_1450937941",
+      "wid": "_101",
+      "uiconf_id": 23448134,
+      "flashvars": {},
+      "cache_st": 1450937941,
+      "entry_id": "0_dbe6pjha"
+    });
+    
+
+
+kWidget.addReadyCallback(function(playerId){
+  var kdp = document.getElementById(playerId);
+  var medias = document.getElementsByClassName('changeMedia');
+
+  for(var i=0;i<medias.length;i++){
+    medias[i].addEventListener('click',function(){
+
+    // destroy the current instance of the kaltura player
+    kWidget.destroy('kaltura_player_1450422131');
+
+    // get the changed media entry id
+    var attr = this.getAttribute('data-entryid');
+
+    //re embed the kaltura player
+    kWidget.embed({
+      "targetId": "kaltura_player_1450422131",
+      "wid": "_2038991",
+      "uiconf_id": 32333361,
+      "flashvars": {
+        "autoplay":true,
+        "vast":{
+          "prerollUrl":"http://projects.kaltura.com/mdale/hotelVastAd.xml?myRefurl=http%3A//myref.com/%3Ffoo%3Dbar%26cat%3Ddog{utility.nativeAdId}"
+        }
+      },
+      "cache_st": 1450422131,
+      "entry_id": attr
+    });
+});
+}
+});
+</script>
+
+    <div class="" style="margin-top:5px;float:left">
+      <a class="changeMedia" data-entryid="0_et2ijexg" style="cursor:pointer">
+        <img src="thumbnail.jpg" style="height:100px;width:150px;border:1px solid black">
+      </a>
+    </div>
+    <div class="" style="margin-top:5px;float:left;margin-left:50px">
+      <a class="changeMedia" data-entryid="0_v2fqlirl" style="cursor:pointer">
+        <img src="thumbnail_python.jpg" style="height:100px;width:150px;border:1px solid black">
+      </a>
+    </div>
+    <div class="" style="margin-top:5px;float:left;margin-left:50px">
+      <a class="changeMedia" data-entryid="0_r69vz6k4" style="cursor:pointer">
+        <img src="thumbnail_blackboard.jpg" style="height:100px;width:150px;border:1px solid black">
+      </a>
+    </div>
+  </div>
+</div>
+  </body>
+</html>
